@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff;
+        }
+        #question {
+            font-size: 20px;
+            margin-top: 50px;
+        }
+        #options {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="question">Você é gay?</div>
+    <div id="options">
+        <button onclick="showInfo('Sim')">Sim</button>
+        <button id="noBtn" onmouseover="moveButton()">Não</button>
+    </div>
+    <script>
+        function showInfo(answer) {
+            alert('Obrigado amigo');
+            closeWindow();
+        }
+
+        function moveButton() {
+            var noBtn = document.getElementById('noBtn');
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = Math.random() * window.innerWidth + 'px';
+            noBtn.style.top = Math.random() * window.innerHeight + 'px';
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+    </script>
+</body>
+</html>
